@@ -2,14 +2,14 @@
 # Page Info
 title: "My Dashboard"
 subtitle: "Server Portal"
+logo: "assets/logo.png"
 
 # Header and Footer
 header: true
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>'
+footer: '<p>Created with <span class="has-text-danger">❤️</span></p>'
 
 # Main Configuration
-# THIS IS THE GLOBAL FIX for "network unreachable" errors.
-connectivityCheck: false
+connectivityCheck: false # This prevents the "network unreachable" errors.
 
 # Layout
 columns: 3
@@ -17,30 +17,30 @@ defaults:
   layout: columns
   colorTheme: auto
 
-# Theme
-theme: default
-colors: ~
+# --- SECTIONS ---
 
-# Optional message
-message: ~
+# Navbar Links (leave this empty to have a clean navbar with only controls)
+links: []
 
-# Your services and links
-links:
-  - name: "SillyTavern"
-    icon: "fas fa-brain"
-    url: "https://sillytavern.yourdomain.com/" # Change this to your real URL
-    target: "_blank"
+# Dashboard Services (this will create the visual "cards")
+services:
+  - name: "My Services"
+    icon: "fas fa-server"
+    items:
+      - name: "SillyTavern"
+        icon: "fas fa-brain"
+        subtitle: "The main event"
+        url: "https://st.4win.lite/" # Change to your actual URL
+        target: "_blank"
 
-  - name: "Cloudflare"
-    icon: "fas fa-cloud"
-    url: "https://dash.cloudflare.com"
-    target: "_blank"
-    
-  - name: "Oracle Cloud"
-    icon: "fas fa-database"
-    url: "https://cloud.oracle.com"
-    target: "_blank"
+      - name: "Cloudflare"
+        icon: "fas fa-cloud"
+        subtitle: "Domain Management"
+        url: "https://dash.cloudflare.com"
+        target: "_blank"
 
-# Leave these empty unless you want to use them
-services: []
-proxy: ~
+      - name: "Oracle Cloud"
+        icon: "fas fa-database"
+        subtitle: "Server Management"
+        url: "https://cloud.oracle.com"
+        target: "_blank"
