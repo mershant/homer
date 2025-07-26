@@ -15,17 +15,12 @@ connectivityCheck: false
 columns: 3
 defaults:
   layout: columns
-  colorTheme: auto # The theme will override this
+  colorTheme: auto
 
-# --- Catppuccin Theme Configuration ---
-# 1. Set the theme name to a specific flavor. Options are:
-#    catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+# --- Theme Configuration ---
 theme: catppuccin-mocha
-
-# 2. Point to the custom stylesheet we created
 stylesheet:
   - "assets/custom.css"
-
 
 # --- SECTIONS ---
 
@@ -34,6 +29,7 @@ links: []
 
 # Dashboard Services
 services:
+  # --- Group 1: Applications ---
   - name: "Applications"
     icon: "fas fa-th-large"
     items:
@@ -42,12 +38,26 @@ services:
         subtitle: "The main event"
         url: "https://st.4lite.win/"
         target: "_blank"
+
       - name: "MCS Manager"
         icon: "fas fa-cube"
         subtitle: "Minecraft Server"
-        url: "https://mc.4lite.win"
+        url: "http://mc.4lite.win"
         target: "_blank"
 
+      - name: "Admin Drive" # <-- NEW: Your full-access drive
+        icon: "fas fa-hdd"
+        subtitle: "Read/Write Access"
+        url: "https://drive.4lite.win"
+        target: "_blank"
+
+      - name: "Share Link" # <-- NEW: Your read-only share link
+        icon: "fas fa-share-alt"
+        subtitle: "Read-Only Access"
+        url: "https://share.4lite.win"
+        target: "_blank"
+
+  # --- Group 2: Server ---
   - name: "Server"
     icon: "fas fa-server"
     items:
@@ -57,6 +67,7 @@ services:
         url: "https://cloud.oracle.com"
         target: "_blank"
 
+  # --- Group 3: Management ---
   - name: "Management"
     icon: "fas fa-tools"
     items:
