@@ -1,7 +1,7 @@
 ---
 # Page Info
-title: "My Dashboard"
-subtitle: "Server Portal"
+title: "Homelab"
+subtitle: "4lite.win"
 logo: "assets/logo.png"
 
 # Header and Footer
@@ -9,38 +9,59 @@ header: true
 footer: '<p>Created with <span class="has-text-danger">❤️</span></p>'
 
 # Main Configuration
-connectivityCheck: false # This prevents the "network unreachable" errors.
+connectivityCheck: false
 
 # Layout
 columns: 3
 defaults:
   layout: columns
-  colorTheme: auto
+  colorTheme: auto # The theme will override this
+
+# --- Catppuccin Theme Configuration ---
+# 1. Set the theme name to a specific flavor. Options are:
+#    catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+theme: catppuccin-mocha
+
+# 2. Point to the custom stylesheet we created
+stylesheet:
+  - "assets/custom.css"
+
 
 # --- SECTIONS ---
 
-# Navbar Links (leave this empty to have a clean navbar with only controls)
+# Navbar Links
 links: []
 
-# Dashboard Services (this will create the visual "cards")
+# Dashboard Services
 services:
-  - name: "My Services"
-    icon: "fas fa-server"
+  - name: "Applications"
+    icon: "fas fa-th-large"
     items:
       - name: "SillyTavern"
         icon: "fas fa-brain"
         subtitle: "The main event"
-        url: "https://st.4lite.win/" # Change to your actual URL
+        url: "https://st.4lite.win/"
+        target: "_blank"
+      - name: "MCS Manager"
+        icon: "fas fa-cube"
+        subtitle: "Minecraft Server"
+        url: "http://mc.4lite.win"
         target: "_blank"
 
+  - name: "Server"
+    icon: "fas fa-server"
+    items:
+      - name: "Oracle Cloud"
+        icon: "fab fa-oracle"
+        subtitle: "The Server"
+        url: "https://cloud.oracle.com"
+        target: "_blank"
+
+  - name: "Management"
+    icon: "fas fa-tools"
+    items:
       - name: "Cloudflare"
         icon: "fas fa-cloud"
-        subtitle: "Domain Management"
+        subtitle: "Domain & Security"
         url: "https://dash.cloudflare.com"
-        target: "_blank"
-
-      - name: "Oracle Cloud"
-        icon: "fas fa-database"
-        subtitle: "Server Management"
-        url: "https://cloud.oracle.com"
         target: "_blank"
