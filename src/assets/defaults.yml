@@ -45,7 +45,7 @@ services:
       - name: "MCS Manager"
         icon: "fas fa-cube"
         subtitle: "Minecraft Server"
-        url: "http://mc.4lite.win"
+        url: "https://mc.4lite.win"
         target: "_blank"
 
   - name: "Server"
