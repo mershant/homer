@@ -1,27 +1,46 @@
 ---
-# Default configuration
+# Page Info
+title: "My Dashboard"
+subtitle: "Server Portal"
 
-title: "Dashboard"
-subtitle: "Homer"
-
+# Header and Footer
 header: true
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>'
 
+# Main Configuration
+# THIS IS THE GLOBAL FIX for "network unreachable" errors.
+connectivityCheck: false
+
+# Layout
 columns: 3
-connectivityCheck: true
-
 defaults:
-  # columns, list
   layout: columns
-  # auto, light, dark
   colorTheme: auto
 
+# Theme
 theme: default
 colors: ~
 
+# Optional message
 message: ~
-links: []
+
+# Your services and links
+links:
+  - name: "SillyTavern"
+    icon: "fas fa-brain"
+    url: "https://sillytavern.yourdomain.com/" # Change this to your real URL
+    target: "_blank"
+
+  - name: "Cloudflare"
+    icon: "fas fa-cloud"
+    url: "https://dash.cloudflare.com"
+    target: "_blank"
+    
+  - name: "Oracle Cloud"
+    icon: "fas fa-database"
+    url: "https://cloud.oracle.com"
+    target: "_blank"
+
+# Leave these empty unless you want to use them
 services: []
-
-
 proxy: ~
