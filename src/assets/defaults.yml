@@ -30,7 +30,7 @@ services:
       - name: "SillyTavern"
         icon: "fas fa-brain"
         subtitle: "The main event"
-        url: "https://st.4win.lite/" # Change to your actual URL
+        url: "https://st.4lite.win/" # Change to your actual URL
         target: "_blank"
 
       - name: "Cloudflare"
